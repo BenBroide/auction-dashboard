@@ -27,7 +27,7 @@ add_action( 'admin_enqueue_scripts', 'UAD_admin_script' );
 
 function AUD_get_auctions_bids() {
 	global $wpdb;
-	$results = $wpdb->get_results( 'SELECT * FROM `wp_wdm_bidders`' );
+	$results = $wpdb->get_results( 'select name, email, max(bid) as bid, auction_id from wp_wdm_bidders group by auction_id, email' );
 
 	return $results;
 }
