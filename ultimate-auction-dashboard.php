@@ -20,6 +20,8 @@ function UAD_admin_script( $hook ) {
 	);
 	wp_enqueue_script( 'UAD-dashboard', plugin_dir_url( __FILE__ ) . '/dashboard-app/dist/js/app.js', [], '', true );
 	wp_enqueue_style( 'UAD-dashboard', plugin_dir_url( __FILE__ ) . '/dashboard-app/dist/css/app.css' );
+	wp_enqueue_style( 'material-icons', 	'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material Icons' );
+
 
 }
 
